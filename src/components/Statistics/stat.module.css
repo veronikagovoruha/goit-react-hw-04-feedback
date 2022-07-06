@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    margin-top: 5px;
+}
+
+.item:first-child {
+    margin-top: 0;
+}
