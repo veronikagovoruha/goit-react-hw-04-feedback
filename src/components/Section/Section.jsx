@@ -1,16 +1,13 @@
-import { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './section.module.css';
 
-class Section extends Component {
-    render() {
+const Section = ({title, children}) => {
         return (
             <div className={styles.sectionWrapper}>
-                <h2>{this.props.title}</h2>
-                {this.props.children}
+                <h2>{title}</h2>
+                {children}
             </div>
         )
-    }
 }
 
 Section.propTypes = {

@@ -1,14 +1,12 @@
-import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Notification extends Component {
-    render() {
+const Notification = ({message}) => {
         return (
             <div>
-                <p>{this.props.message}</p>
+                <p>{message}</p>
             </div>
         )
-    }
+
 }
 
 Notification.propTypes = {

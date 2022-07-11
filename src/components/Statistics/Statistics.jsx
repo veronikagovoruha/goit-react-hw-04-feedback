@@ -1,20 +1,17 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
 import styles from './stat.module.css';
 
-class Statistics extends Component {
-    render() {
+const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
         return (
             <div className={styles.wrapper}>
-                <span className={styles.item}>Good: {this.props.good}</span>
-                <span className={styles.item}>Neutral: {this.props.neutral}</span>
-                <span className={styles.item}>Bad: {this.props.bad}</span>
-                <span className={styles.item}>Total: {this.props.total}</span>
-                <span className={styles.item}>Positive feedback: {this.props.positivePercentage}%</span>
+                <span className={styles.item}>Good: {good}</span>
+                <span className={styles.item}>Neutral: {neutral}</span>
+                <span className={styles.item}>Bad: {bad}</span>
+                <span className={styles.item}>Total: {total}</span>
+                <span className={styles.item}>Positive feedback: {positivePercentage}%</span>
             </div>
         )
     }
-}
 
 Statistics.propTypes = {
     good: PropTypes.number.isRequired,
