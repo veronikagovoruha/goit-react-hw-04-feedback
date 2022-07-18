@@ -1,10 +1,7 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './feedback.module.css';
 
-class FeedbackOptions extends Component {
-    render() {
-        const { options, onLeaveFeedback } = this.props;
+const FeedbackOptions = ({options, onLeaveFeedback}) => {
         const buttons = options.map((option, index) => {
             return (
                 <button
@@ -23,7 +20,6 @@ class FeedbackOptions extends Component {
             </div>
         );
     }
-}
 
 FeedbackOptions.propTypes = {
     options: PropTypes.arrayOf(PropTypes.string),
